@@ -5,12 +5,12 @@
 class Kubewall < Formula
   desc "kubewall is a single binary to manage multiple clusters."
   homepage "https://github.com/kubewall/kubewall"
-  version "0.0.2"
+  version "0.0.3"
   license "Apache License 2.0"
 
   on_macos do
-    url "https://github.com/kubewall/kubewall/releases/download/v0.0.2/kubewall_Darwin_all.tar.gz"
-    sha256 "6ee87423cc179e751b6a36fa590a25e755f257c2320b502b1af7edd0788653d0"
+    url "https://github.com/kubewall/kubewall/releases/download/v0.0.3/kubewall_Darwin_all.tar.gz"
+    sha256 "ce0d74c348a4659d3c78f285fb60a1b7d8fa7428b4aa67bd2644ccf0a29b523d"
 
     def install
       bin.install "kubewall"
@@ -20,8 +20,8 @@ class Kubewall < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kubewall/kubewall/releases/download/v0.0.2/kubewall_Linux_x86_64.tar.gz"
-        sha256 "889bf292b3197f49286044106be0b3b103b77dbe4efa6fdcba26659c88965e4e"
+        url "https://github.com/kubewall/kubewall/releases/download/v0.0.3/kubewall_Linux_x86_64.tar.gz"
+        sha256 "52699ec3bc4a00c9678190ee7ad32d97a68fcb838889bdc848fe21aa536ed000"
 
         def install
           bin.install "kubewall"
@@ -30,8 +30,8 @@ class Kubewall < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/kubewall/kubewall/releases/download/v0.0.2/kubewall_Linux_arm64.tar.gz"
-        sha256 "37a0919d0f81927db945cf6662e63fcd3c36343e15f143508216cc1e9a52dbd7"
+        url "https://github.com/kubewall/kubewall/releases/download/v0.0.3/kubewall_Linux_arm64.tar.gz"
+        sha256 "e69a91d1df23ee7015baa458039a2199cb77b1727c1de77710ffd69addd4f053"
 
         def install
           bin.install "kubewall"
