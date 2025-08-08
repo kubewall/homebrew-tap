@@ -37,4 +37,28 @@ class Kubewall < Formula
   test do
     system "#{bin}/kubewall -v"
   end
+
+  def caveats
+    <<~EOS
+      You can run kubewall directly:
+        kubewall
+
+      Or optionally run it as a background service:
+        brew services start kubewall
+
+      To manage the service:
+        brew services stop kubewall
+        brew services restart kubewall
+
+      Service logs are available at:
+        #{var}/log/kubewall.log
+    EOS
+  end
+
+  service do
+    run [opt_bin/"kubewall","--no-open-browser"]
+    keep_alive true
+    log_path var/"log/kubewall.log"
+    error_log_path var/"log/kubewall.log"
+  end
 end
