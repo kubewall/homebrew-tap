@@ -5,12 +5,12 @@
 class Kubewall < Formula
   desc "kubewall is a single binary to manage multiple clusters."
   homepage "https://github.com/kubewall/kubewall"
-  version "0.0.11"
+  version "0.0.12"
   license "Apache License 2.0"
 
   on_macos do
-    url "https://github.com/kubewall/kubewall/releases/download/v0.0.11/kubewall_Darwin_all.tar.gz"
-    sha256 "1aa5db4f6d6f97cb981d20f8907e610f564b7ccf684da0ff5c2d1e749d01ad3c"
+    url "https://github.com/kubewall/kubewall/releases/download/v0.0.12/kubewall_Darwin_all.tar.gz"
+    sha256 "79affb1283cce446ce9ac1bb396e39c20f4e4f335d2055b27ba3b4f64bbbf57d"
 
     def install
       bin.install "kubewall"
@@ -19,15 +19,15 @@ class Kubewall < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kubewall/kubewall/releases/download/v0.0.11/kubewall_Linux_x86_64.tar.gz"
-      sha256 "52c6de623aad473ec82e6fe94fda5bf4501c85f84713f4f8a1461e38fcb0e6d3"
+      url "https://github.com/kubewall/kubewall/releases/download/v0.0.12/kubewall_Linux_x86_64.tar.gz"
+      sha256 "744b47cf7b5f5c3f039f37e4e21e6d7f473d8ee74c1e68c489427f03de9aba06"
       def install
         bin.install "kubewall"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/kubewall/kubewall/releases/download/v0.0.11/kubewall_Linux_arm64.tar.gz"
-      sha256 "f2d954f8f998394c09de98ee9e3de85a5b480b129a00f9496a8dffcc5548ab35"
+      url "https://github.com/kubewall/kubewall/releases/download/v0.0.12/kubewall_Linux_arm64.tar.gz"
+      sha256 "f58fc54f9b5f0a1f8d9b2f9caa4d7b94fcbc2d50625df0eac33bf5da7631bd01"
       def install
         bin.install "kubewall"
       end
@@ -40,18 +40,18 @@ class Kubewall < Formula
 
   def caveats
     <<~EOS
-      You can run kubewall directly:
-        kubewall
+      \e[1mTo run kubewall cli:\e[0m
+        \e[32mkubewall\e[0m
 
-      Or optionally run it as a background service:
-        brew services start kubewall
+      \e[1mTo run kubewall as a background service:\e[0m
+        \e[32mbrew services start kubewall\e[0m
 
-      To manage the service:
-        brew services stop kubewall
-        brew services restart kubewall
+      \e[1mTo manage the background service:\e[0m
+        \e[33mbrew services stop kubewall\e[0m
+        \e[33mbrew services restart kubewall\e[0m
 
-      Service logs are available at:
-        #{var}/log/kubewall.log
+      \e[1mLog files are available at:\e[0m
+        \e[34m/opt/homebrew/var/log/kubewall.log\e[0m
     EOS
   end
 
