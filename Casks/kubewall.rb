@@ -36,17 +36,17 @@ cask "kubewall" do
 
   on_macos do
     url "https://github.com/kubewall/kubewall/releases/download/v0.0.12/kubewall_Darwin_all.tar.gz"
-    sha256 "3ada5cce6b0b7250f04df696ecb3178c91502bf0a13387cf8982e081b5a11392"
+    sha256 "79affb1283cce446ce9ac1bb396e39c20f4e4f335d2055b27ba3b4f64bbbf57d"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kubewall/kubewall/releases/download/v0.0.12/kubewall_Linux_x86_64.tar.gz"
-      sha256 "0d934e599988de78c3b8fd49b1a5a64b01dd4b69f56fe047a5120ee8b6f46715"
+      sha256 "744b47cf7b5f5c3f039f37e4e21e6d7f473d8ee74c1e68c489427f03de9aba06"
     end
     on_arm do
       url "https://github.com/kubewall/kubewall/releases/download/v0.0.12/kubewall_Linux_arm64.tar.gz"
-      sha256 "6875004785986c97cc0e617357f04bec25e549898c4d57fcbc9744bef9fcba63"
+      sha256 "f58fc54f9b5f0a1f8d9b2f9caa4d7b94fcbc2d50625df0eac33bf5da7631bd01"
     end
   end
 
