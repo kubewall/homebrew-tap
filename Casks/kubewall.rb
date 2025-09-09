@@ -21,6 +21,7 @@ cask "kubewall" do
     keep_alive true
     log_path var/"log/kubewall.log"
     error_log_path var/"log/kubewall.log"
+    name "homebrew.mxcl.kubewall"
   end
 
   name "kubewall"
