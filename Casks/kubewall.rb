@@ -23,6 +23,7 @@ cask "kubewall" do
     error_log_path var/"log/kubewall.log"
   end
 
+  name "kubewall"
   desc "kubewall is a single binary to manage multiple clusters."
   homepage "https://github.com/kubewall/kubewall"
   version "0.0.13"
