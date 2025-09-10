@@ -16,14 +16,7 @@ cask "kubewall" do
         \e[34m/opt/homebrew/var/log/kubewall.log\e[0m
     EOS
   end
-  service do
-    run [opt_bin/"kubewall","--no-open-browser"]
-    keep_alive true
-    log_path var/"log/kubewall.log"
-    error_log_path var/"log/kubewall.log"
-    working_dir var
-    name "kubewall"
-  end
+
 
   name "kubewall"
   desc "kubewall is a single binary to manage multiple clusters."
