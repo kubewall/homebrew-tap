@@ -4,16 +4,6 @@ cask "kubewall" do
     <<~EOS
       \e[1mTo run kubewall cli:\e[0m
         \e[32mkubewall\e[0m
-
-      \e[1mTo run kubewall as a background service:\e[0m
-        \e[32mbrew services start kubewall\e[0m
-
-      \e[1mTo manage the background service:\e[0m
-        \e[33mbrew services stop kubewall\e[0m
-        \e[33mbrew services restart kubewall\e[0m
-
-      \e[1mLog files are available at:\e[0m
-        \e[34m/opt/homebrew/var/log/kubewall.log\e[0m
     EOS
   end
 
