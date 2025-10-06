@@ -2,16 +2,18 @@
 cask "kubewall" do
   def caveats
     <<~EOS
-      \e[1mTo run kubewall cli:\e[0m
+      \e[1mTo run kubewall cli simply run:\e[0m
         \e[32mkubewall\e[0m
+
+      \e[1mTo run kubewall on specific ip and port:\e[0m
+        \e[32mkubewall --listen :7080\e[0m
     EOS
   end
-
 
   name "kubewall"
   desc "kubewall is a single binary to manage multiple clusters."
   homepage "https://github.com/kubewall/kubewall"
-  version "0.0.13"
+  version "0.0.14"
 
   livecheck do
     skip "Auto-generated on release."
@@ -20,18 +22,18 @@ cask "kubewall" do
   binary "kubewall"
 
   on_macos do
-    url "https://github.com/kubewall/kubewall/releases/download/v0.0.13/kubewall_Darwin_all.tar.gz"
-    sha256 "3f08130aceb91f7ff2877666de6e86cde707b917e2304a093088ea1498362700"
+    url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Darwin_all.tar.gz"
+    sha256 "0df7f8562e9a6c4eb29905b435af1bf53cb2b1c4dd964920e4de130422a294bf"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/kubewall/kubewall/releases/download/v0.0.13/kubewall_Linux_x86_64.tar.gz"
-      sha256 "dd76d65a049323ff73f030411567984007210e1afab0c5921783209519f484c6"
+      url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_x86_64.tar.gz"
+      sha256 "bf76d205738f8da186230cbe941fb4291ec75573143b4089c87ea1612e7a1dfe"
     end
     on_arm do
-      url "https://github.com/kubewall/kubewall/releases/download/v0.0.13/kubewall_Linux_arm64.tar.gz"
-      sha256 "bf8bde976316624fb95620b9156698be0bec485f99f47758f7f6af03c95e2b24"
+      url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_arm64.tar.gz"
+      sha256 "2ae5bea88755e37cdad26e447288d81671d6fbbd79dd5bd81029dfcedc82b08d"
     end
   end
 
