@@ -13,7 +13,7 @@ cask "kubewall" do
   name "kubewall"
   desc "kubewall is a single binary to manage multiple clusters."
   homepage "https://github.com/kubewall/kubewall"
-  version "0.0.14"
+  version "0.0.15"
 
   livecheck do
     skip "Auto-generated on release."
@@ -23,17 +23,17 @@ cask "kubewall" do
 
   on_macos do
     url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Darwin_all.tar.gz"
-    sha256 "986a70d9d9a06472fd30cd79f97beee8b080d9c651854348df6099fdae7db9a8"
+    sha256 "5c17ae6f207a843f32c59aa7794cdb0788ef0142699874c96c459b90299bfd43"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_x86_64.tar.gz"
-      sha256 "4b04c9b360405225c3c04ea479c77143bc33031ada5a483377a44b412f7a7ce9"
+      sha256 "2c9fd20a6f266a905677473fd07242f2fcc4f1c1aecbf4033eb1b30e28dc9c43"
     end
     on_arm do
       url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_arm64.tar.gz"
-      sha256 "0cc19a00015f5a46fc54d34de7ab4bb7702bce6c3e5ae2371b600d54ee92fd54"
+      sha256 "142d0a4d2af543daec8cbf93b7b6165a7c1666facc0fca22b68d77e0a227d83a"
     end
   end
 
