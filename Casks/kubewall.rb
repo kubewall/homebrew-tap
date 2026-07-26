@@ -10,20 +10,20 @@ cask "kubewall" do
     EOS
   end
 
-  version "0.0.20"
+  version "0.0.21"
 
   on_macos do
-    sha256 "3e4b7c8daa603a95855fc8e8b326b1fde9fa3a5fbf525f9cf488d0245f27191e"
+    sha256 "58729330a1e93a4cb4021722e398375f41efc58629e0bea8ad083a2fa047923f"
     url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Darwin_all.tar.gz"
   end
 
   on_linux do
     on_intel do
-      sha256 "01130c74013925d5bd5bcab933da2912465080d16b93e1ba0726502c16b05f08"
+      sha256 "935a7af5591bd4f0bd4609372326da489dd5273fe3d2c6696490e61e6a070fc5"
       url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_x86_64.tar.gz"
     end
     on_arm do
-      sha256 "d6da4ea0ef49925f349e3fded608930d7952e48934e9d263b0da5f227e671c58"
+      sha256 "ba80be2629456796ceb33450e2f0a92c9159de12ff8ef86e5fcb30f0297bbc21"
       url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_arm64.tar.gz"
     end
   end
