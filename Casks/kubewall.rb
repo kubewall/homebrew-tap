@@ -10,21 +10,20 @@ cask "kubewall" do
     EOS
   end
 
-  version "0.0.22"
+  version "0.0.23"
 
   on_macos do
-    sha256 "a6ed5d5201201a1c1d30a99036701bf6c423784c769b02d6f60e83d24a7a5acc"
+    sha256 "9a46a1963e740bb52d7a940f3728a81abde144ebff5442402bead436df770330"
     url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Darwin_all.tar.gz"
   end
-
   on_linux do
-    on_intel do
-      sha256 "aafffba092fc82c548adf966e3143299395814e89aee09995b44e4f8d71b1f64"
-      url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_x86_64.tar.gz"
-    end
     on_arm do
-      sha256 "9d06beebc04603a606b0065348273ffff42ad6383c28fd9a15cc76aad9c57ca3"
+      sha256 "b12d6f1e5df3b2fbf0178399bbd12102eb509a713c2e199090d240bba3d14f8d"
       url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_arm64.tar.gz"
+    end
+    on_intel do
+      sha256 "630d44579287faca2d10f7381bf13311ce5cd3453778524a8349a837c3d288b2"
+      url "https://github.com/kubewall/kubewall/releases/download/v#{version}/kubewall_Linux_x86_64.tar.gz"
     end
   end
 
@@ -45,5 +44,4 @@ cask "kubewall" do
   end
 
   # No zap stanza required
-
 end
